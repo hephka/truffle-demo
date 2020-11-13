@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract SilverToken is ERC20 {
-    address private _owner;
-
-    constructor(uint256 initialSupply) public ERC20("SilverToken", "SLV") {
-        _owner = msg.sender;
-        _mint(msg.sender, initialSupply);
+contract SilverToken is ERC20, Ownable {
+    constructor(address owner_, uint256 initialSupply) public ERC20("SilverToken", "SLV") {
+        transferOwnership(owner_);
+        _mint(owner(), initialSupply);
     }
 }
