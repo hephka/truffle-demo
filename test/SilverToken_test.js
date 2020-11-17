@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-expressions */
+/*
 const { contract, accounts } = require('@openzeppelin/test-environment');
 const { BN } = require('@openzeppelin/test-helpers');
 const { expect } = require('chai');
@@ -54,3 +55,4 @@ describe('SilverToken', async function () {
     });
   });
 });
+*/
