@@ -6,19 +6,19 @@ pragma solidity ^0.6.0;
 contract Calc {
     using SafeMath for uint256;
 
-    function myadd(uint256 a, uint256 b) public pure returns (uint256) {
+    function add(uint256 a, uint256 b) public pure returns (uint256) {
         return a.add(b);
     }
 
-    function mysub(uint256 a, uint256 b) public pure returns (uint256) {
+    function sub(uint256 a, uint256 b) public pure returns (uint256) {
         return a.sub(b, "Calc: depassement de tampon");
     }
 
-    function mymul(uint256 a, uint256 b) public pure returns (uint256) {
+    function mul(uint256 a, uint256 b) public pure returns (uint256) {
         return a.mul(b);
     }
 
-    function mydiv(uint256 a, uint256 b) public pure returns (uint256) {
+    function div(uint256 a, uint256 b) public pure returns (uint256) {
         return a.div(b);
     }
 }
